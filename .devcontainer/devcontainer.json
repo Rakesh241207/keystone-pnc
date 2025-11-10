@@ -1,0 +1,17 @@
+{
+  "name": "keystone-pnc",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "docker-in-docker": "latest"
+  },
+  "postCreateCommand": "pip install -r backend/requirements.txt && npm install -g @openapitools/openapi-generator-cli",
+  "forwardPorts": [8000, 5432],
+  "extensions": [
+    "ms-python.python",
+    "ms-azuretools.vscode-docker",
+    "ms-azuretools.vscode-terraform",
+    "redhat.vscode-yaml",
+    "eamodio.gitlens",
+    "GitHub.copilot"
+  ]
+}
